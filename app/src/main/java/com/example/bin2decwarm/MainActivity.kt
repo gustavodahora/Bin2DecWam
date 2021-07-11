@@ -72,4 +72,14 @@ class MainActivity : AppCompatActivity() {
         clipboard.setPrimaryClip(clip)
         Toast.makeText(applicationContext, "Number $decimal has been copied to clipboard", Toast.LENGTH_SHORT).show()
     }
+
+    fun paste(v: View) {
+        val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+        val paste = clipboard?.primaryClip
+        val item = paste?.getItemAt(0)
+
+        binding.binary.setText(item?.text.toString())
+        binding.binary.setSelection(binding.binary.text.toString().length)
+
+    }
 }

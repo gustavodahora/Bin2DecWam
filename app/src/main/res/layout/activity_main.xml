@@ -39,7 +39,7 @@
         android:id="@+id/paste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="backspace"
+        android:onClick="paste"
         android:src="@drawable/ic_baseline_content_paste_24"
         app:layout_constraintBottom_toBottomOf="@+id/binary"
         app:layout_constraintStart_toEndOf="@+id/binary"
