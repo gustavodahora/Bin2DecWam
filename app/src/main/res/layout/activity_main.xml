@@ -24,7 +24,7 @@
 
     <EditText
         android:id="@+id/binary"
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
@@ -36,13 +36,28 @@
         app:layout_constraintTop_toBottomOf="@id/app_name" />
 
     <ImageButton
+        android:id="@+id/paste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="backspace"
+        android:src="@drawable/ic_baseline_content_paste_24"
+        app:layout_constraintBottom_toBottomOf="@+id/binary"
+        app:layout_constraintStart_toEndOf="@+id/binary"
+        app:layout_constraintTop_toTopOf="@+id/binary"
+        app:layout_constraintEnd_toStartOf="@+id/backspace"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        />
+
+    <ImageButton
         android:id="@+id/backspace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="backspace"
         android:src="@drawable/ic_baseline_keyboard_return_24"
         app:layout_constraintBottom_toBottomOf="@+id/binary"
-        app:layout_constraintStart_toEndOf="@+id/binary"
+        app:layout_constraintStart_toEndOf="@+id/paste"
         app:layout_constraintTop_toTopOf="@+id/binary"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -105,6 +120,8 @@
         android:backgroundTint="@color/gray"
         android:onClick="one"
         android:text="@string/one"
+        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,6 +135,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/zero"
         android:onClick="zero"
+        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
