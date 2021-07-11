@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Bin2DecWarm</string>
+    <string name="binary">Binary</string>
+    <string name="bin2dec">Bin2Dec</string>
+    <string name="decimal">Decimal</string>
+    <string name="convert">Convert</string>
+    <string name="one">1</string>
+    <string name="zero">0</string>
+    <string name="clean">Clean</string>
+</resources>
