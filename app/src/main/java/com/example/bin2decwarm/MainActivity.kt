@@ -1,11 +1,14 @@
 package com.example.bin2decwarm
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R.attr.label
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.os.Bundle
-import android.text.TextUtils.substring
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.bin2decwarm.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -60,5 +63,13 @@ class MainActivity : AppCompatActivity() {
             binding.binary.setText(binaryAddition)
             binding.binary.setSelection(binding.binary.text.toString().length)
         }
+    }
+
+    fun copy(v: View) {
+        val decimal = binding.decimal.text
+        val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+        val clip = ClipData.newPlainText("decimal", decimal)
+        clipboard.setPrimaryClip(clip)
+        Toast.makeText(applicationContext, "Number $decimal has been copied to clipboard", Toast.LENGTH_SHORT).show()
     }
 }
