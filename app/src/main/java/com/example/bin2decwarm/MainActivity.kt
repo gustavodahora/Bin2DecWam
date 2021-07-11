@@ -28,10 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     fun convert(v: View) {
         var length = binding.binary.text.length
-        if (length > 0) {
+        if (length > 0 && !binding.binary.text.isEmpty() && !binding.binary.text.isBlank()) {
             var binary = binding.binary.text.toString()
             var decimal = Integer.parseInt(binary, 2)
             binding.decimal.setText("$decimal") // Convert to binary
+        } else {
+            Toast.makeText(applicationContext, "Type an input", Toast.LENGTH_SHORT).show()
         }
     }
 
