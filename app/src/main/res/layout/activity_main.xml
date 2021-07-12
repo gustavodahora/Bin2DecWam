@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
-        android:onClick="convert"
+        android:onClick="clean"
         android:text="@string/clean"
         android:drawableLeft="@drawable/ic_baseline_remove_circle_outline_24"
         app:layout_constraintStart_toStartOf="parent"

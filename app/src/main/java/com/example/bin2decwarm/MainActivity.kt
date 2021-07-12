@@ -82,4 +82,9 @@ class MainActivity : AppCompatActivity() {
         binding.binary.setSelection(binding.binary.text.toString().length)
 
     }
+
+    fun clean(v: View) {
+        binding.binary.setText("")
+        binding.decimal.setText("")
+    }
 }
